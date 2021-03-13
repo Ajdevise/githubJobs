@@ -7,3 +7,50 @@
         padding-top: 2rem;
     }
 }
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+.fakeCheckbox::before,
+.fakeRadio::before {
+    content: "";
+    display: block;
+    height: 1.125rem;
+    width: 1.125rem;
+    border: 1px solid $color-input;
+    transition: all .2s;
+    box-shadow: inset 0 0 0 3px $color-background;
+}
+
+.fakeCheckbox {
+    
+    &::before {
+        border-radius: 2px;
+    }
+
+    &:hover::before {
+        border-color: $color-text;
+    }
+}
+
+.fakeRadio {
+
+    &::before {
+        border-radius: 50%;
+    }
+
+    &:hover::before {
+        border-color: $color-text;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center; 
+}

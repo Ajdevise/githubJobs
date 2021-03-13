@@ -18,3 +18,23 @@ a:not([data-link="true"]),
 a:not([data-link="true"]):visited {
     text-decoration: none;
 }
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    padding: 0.9375rem 1rem 1.125rem 2.375rem; 
+    font-size: 0.75rem;
+    background-repeat: no-repeat;
+    background-size: 15px 14px;
+    background-position: top 15px left 13.5px;
+    font-family: inherit;
+    font-weight: 500;
+    color: $color-logo-dark;
+    border-radius: 4px;
+
+    &::placeholder {
+        color: darken($color-input, 20%);
+    }
+}
