@@ -1,0 +1,16 @@
+@import "../styles/variables/colors";
+
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    
+    a {
+        color: $color-logo-dark;
+    }
+
+    span {
+        font-weight: 300;
+    }
+}

@@ -13,3 +13,8 @@ html {
 body {
     background-color: $color-background;
 }
+
+a:not([data-link="true"]),
+a:not([data-link="true"]):visited {
+    text-decoration: none;
+}
