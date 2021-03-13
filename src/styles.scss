@@ -1,1 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/variables/colors";
+@import "./styles/variables/breakpoints";
+@import "./styles/global/global";
+@import "./styles/global/utils";
