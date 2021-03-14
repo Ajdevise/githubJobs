@@ -34,6 +34,7 @@
 
 .secondary-form {
     font-family: Poppins; 
+    margin-bottom: 1.4375rem;
 
     .form-group {
         input[type="checkbox"]:checked + label::before,
@@ -51,7 +52,7 @@
     label {
         font-size: 0.875rem;
         font-weight: 500;
-        color: $color-text;
+        // color: $color-text;
         cursor: pointer;
 
         span {
@@ -63,7 +64,7 @@
         margin-bottom: 1.6875rem;
 
         h3 {
-            font-size: 14px;
+            font-size: 0.875rem;
             font-weight: 700;
             text-transform: uppercase;
             color: $color-input;
