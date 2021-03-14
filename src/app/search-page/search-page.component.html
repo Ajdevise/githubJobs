@@ -1,46 +1,46 @@
 <section>
     <h2 class="sr-only">Search</h2>
-    <form class="main-form">
+    <form class="main-form" [formGroup]="searchForm" (ngSubmit)="submitForm()">
         <img src="../../assets/backgroundImg.png" alt="" aria-hidden="true">
         <div class="form-field">
             <label for="main-search" class="sr-only">Search job by title, company, expertise</label>
-            <input type="text" placeholder="Title, companies, expertise" name="main-search">
+            <input type="text" placeholder="Title, companies, expertise" id="main-search" formControlName="search">
             <button class="cta cta--primary">Search</button>
         </div>
     </form>
     <div>
-        <form class="secondary-form">
+        <form class="secondary-form" [formGroup]="filterForm">
             <div class="form-group form-group-indent">
-                <input type="checkbox" id="full-time" class="sr-only">
+                <input type="checkbox" id="full-time" class="sr-only" formControlName="fullTime">
                 <label for="full-time" class="flex align-center fakeCheckbox">
                     <span>Full time</span>
                 </label>
             </div>
             <div class="form-group location">
                 <h3>location</h3>
-                <input type="text" placeholder="City, state, zip code or country">
+                <input type="text" placeholder="City, state, zip code or country" formControlName="locationInput" (input)="deselectLocationRadios()">
             </div>
             <div class="radios">
                 <div class="form-group form-group-indent">
-                    <input type="radio" name="city" id="city-1" class="sr-only">
+                    <input type="radio" id="city-1" class="sr-only" formControlName="place" value="london">
                     <label for="city-1" class="fakeRadio flex align-center">
                         <span>London</span>
                     </label>
                 </div>
                 <div class="form-group form-group-indent">
-                    <input type="radio" name="city" id="city-2" class="sr-only">
+                    <input type="radio" id="city-2" class="sr-only" formControlName="place" value="amsterdam">
                     <label for="city-2" class="fakeRadio flex align-center">
                         <span>Amsterdam</span>
                     </label>
                 </div>
                 <div class="form-group form-group-indent">
-                    <input type="radio" name="city" id="city-3" class="sr-only">
+                    <input type="radio" id="city-3" class="sr-only" formControlName="place" value="new-york">
                     <label for="city-3" class="fakeRadio flex align-center">
                         <span>New York</span>
                     </label>
                 </div>
                 <div class="form-group form-group-indent">
-                    <input type="radio" name="city" id="city-4" class="sr-only">
+                    <input type="radio" id="city-4" class="sr-only" formControlName="place" value="berlin">
                     <label for="city-4" class="fakeRadio flex align-center">
                         <span>Berlin</span>
                     </label>
