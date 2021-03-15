@@ -9,7 +9,7 @@
         </div>
     </form>
     <div>
-        <form class="secondary-form" [formGroup]="filterForm">
+        <form class="secondary-form" [formGroup]="filterForm" (ngSubmit)="submitForm()">
             <div class="form-group form-group-indent">
                 <input type="checkbox" id="full-time" class="sr-only" formControlName="fullTime">
                 <label for="full-time" class="flex align-center fakeCheckbox">
@@ -22,31 +22,31 @@
             </div>
             <div class="radios">
                 <div class="form-group form-group-indent">
-                    <input type="radio" id="city-1" class="sr-only" formControlName="place" value="london">
+                    <input type="radio" id="city-1" class="sr-only" formControlName="place" value="london" (change)="clearFilterLocationInput()">
                     <label for="city-1" class="fakeRadio flex align-center">
                         <span>London</span>
                     </label>
                 </div>
                 <div class="form-group form-group-indent">
-                    <input type="radio" id="city-2" class="sr-only" formControlName="place" value="amsterdam">
+                    <input type="radio" id="city-2" class="sr-only" formControlName="place" value="amsterdam" (change)="clearFilterLocationInput()">
                     <label for="city-2" class="fakeRadio flex align-center">
                         <span>Amsterdam</span>
                     </label>
                 </div>
                 <div class="form-group form-group-indent">
-                    <input type="radio" id="city-3" class="sr-only" formControlName="place" value="new-york">
+                    <input type="radio" id="city-3" class="sr-only" formControlName="place" value="new+york" (change)="clearFilterLocationInput()">
                     <label for="city-3" class="fakeRadio flex align-center">
                         <span>New York</span>
                     </label>
                 </div>
                 <div class="form-group form-group-indent">
-                    <input type="radio" id="city-4" class="sr-only" formControlName="place" value="berlin">
+                    <input type="radio" id="city-4" class="sr-only" formControlName="place" value="berlin" (change)="clearFilterLocationInput()">
                     <label for="city-4" class="fakeRadio flex align-center">
                         <span>Berlin</span>
                     </label>
                 </div>
             </div>
         </form>
-        <app-jobs-list></app-jobs-list>
+        <app-jobs-list [searchParameters]="searchQuery"></app-jobs-list>
     </div>
 </section>

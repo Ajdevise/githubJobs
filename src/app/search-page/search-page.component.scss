@@ -44,6 +44,11 @@
             border-color: $color-blue;
         }
 
+        input[type="checkbox"]:focus + label::before,
+        input[type="radio"]:focus + label::before {
+            border-color: $color-blue;
+        }
+
         &-indent {
             padding-left: 0.875rem;
         }

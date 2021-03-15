@@ -1,1 +1,7 @@
-<app-job-card></app-job-card>
+<div *ngIf="searchParameters; else selectCriteria">
+    <app-job-card *ngFor="let job of listOfJobs" [job]="job"></app-job-card>
+</div>
+<ng-template #selectCriteria>
+    <p>Tell us what you are looking for</p>
+</ng-template>
+<app-loading *ngIf="loading">Loading...</app-loading>

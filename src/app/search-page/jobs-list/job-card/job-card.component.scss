@@ -1,6 +1,7 @@
 @import "../../../../styles/variables/colors";
 
 .card {
+    margin-bottom: 1.4375rem;
 
     &__wrapper {
         background-color: #fff;
@@ -16,15 +17,11 @@
     }
 
     &__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 5.625rem;
+        height: 5.625rem;
+        object-fit: contain;
         border-radius: 4px;
     }
-
-    // &__text {
-
-    // }
 
     &__company {
         font-size: 0.75rem;
