@@ -14,8 +14,12 @@ export class JobsListComponent implements OnInit, OnChanges {
 
   constructor(private jobsService: JobsService) { }
 
-  ngOnInit() {
-  
+  async ngOnInit() {
+    if(!this.jobsService.currentQuery) return;
+    this.loading = true;
+    this.searchParameters = this.jobsService.currentQuery;
+    this.listOfJobs = await this.jobsService.getJobs(this.searchParameters);
+    this.loading = false;
   }
 
   async ngOnChanges() {
@@ -23,6 +27,7 @@ export class JobsListComponent implements OnInit, OnChanges {
     this.loading = true;
     this.listOfJobs = await this.jobsService.getJobs(this.searchParameters);
     this.loading = false;
+    this.jobsService.currentQuery = this.searchParameters;
   }
 
 }

@@ -10,10 +10,11 @@ import { JobsListComponent } from './search-page/jobs-list/jobs-list.component';
 import { JobCardComponent } from './search-page/jobs-list/job-card/job-card.component';
 import { LoadingComponent } from './loading/loading.component';
 import { RouterModule, Routes } from '@angular/router';
+import { JobDetailsComponent } from './job-details/job-details.component';
 
 const routes: Routes = [
   {path: '', component: SearchPageComponent},
-  // {path: '/:id', component: DetailsPage}
+  {path: ':id', component: JobDetailsComponent}
 ]
 
 @NgModule({
@@ -22,7 +23,8 @@ const routes: Routes = [
     SearchPageComponent,
     JobsListComponent,
     JobCardComponent,
-    LoadingComponent
+    LoadingComponent,
+    JobDetailsComponent
   ],
   imports: [
     BrowserModule,

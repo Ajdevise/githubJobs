@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { JobsService } from 'src/app/jobs.service';
 
 @Component({
   selector: 'app-job-card',
@@ -10,12 +11,11 @@ export class JobCardComponent implements OnInit {
   currentDate: Date = new Date();
   @Input() job;
 
-  constructor() { }
+  constructor(private jobsService: JobsService) { }
 
   ngOnInit() {
     let cardDate = new Date(this.job.created_at);
-    this.daysAgo = Math.abs(this.currentDate.getTime() - cardDate.getTime());
-    this.daysAgo = Math.ceil(this.daysAgo / (1000 * 3600 * 24));
+    this.daysAgo = this.jobsService.elapsedDays(this.currentDate, cardDate);
   }
 
 }

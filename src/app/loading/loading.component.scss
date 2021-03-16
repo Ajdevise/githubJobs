@@ -7,7 +7,9 @@
     border: 6px solid $color-input;
     border-top: 6px solid $color-blue;
     animation: rotate 1s cubic-bezier(0,1.22,.86,.53) infinite;
-    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @keyframes rotate {

@@ -1,0 +1,54 @@
+.details {
+
+    &__aside {
+        margin-bottom: 2.25rem;
+        font-family: Poppins;
+        font-size: 0.875rem;
+    }
+
+    &__icon {
+        margin-right: 0.9375rem;
+        width: 1.125rem;
+    }
+
+    &__apply {
+        display: block;
+        margin-top: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    &__heading {
+        margin-bottom: 0.625rem;
+    }
+
+    &__flag {
+        margin-top: 0.375rem;
+    }
+
+    &__logo {
+        width: 2.625rem;
+        height: 2.625rem;
+        object-fit: contain;
+    }
+
+    &__profile {
+        margin-top: 1.6875rem;
+    }
+
+    &__h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.625rem;
+    }
+
+    &__img-wrapper {
+        margin-right: 0.75rem;
+    }
+
+    &__text {
+        
+        p {
+            margin-top: 2.125rem;
+            line-height: 1.6;
+        }
+    }
+}

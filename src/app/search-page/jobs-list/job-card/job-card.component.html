@@ -1,20 +1,20 @@
 <article class="card">
-    <a href="#" class="card__wrapper flex">
+    <a href="#" class="card__wrapper flex" [routerLink]="['/', job.id]" data-custom-link="true">
         <div class="card__img-wrapper">
             <img [src]="job.company_logo" alt="" class="card__img">
         </div>
         <div class="card__text">
             <strong class="card__company">{{ job.company }}</strong>
             <h3 class="card__job">{{ job.title }}</h3>
-            <p class="card__flag" *ngIf="job.type">{{ job.type }}</p>
+            <p class="flag" *ngIf="job.type">{{ job.type }}</p>
             <div class="card__details flex align-center">
-                <div class="flex align-center">
-                    <img src="../../../../assets/earth.svg" alt="" class="card__icon">
-                    <span class="card__icon-description">{{ job.location }}</span>
+                <div class="icon-text">
+                    <img src="../../../../assets/earth.svg" alt="">
+                    <span>{{ job.location }}</span>
                 </div>
-                <div class="flex align-center">
-                    <img src="../../../../assets/clock.svg" alt="" class="card__icon">
-                    <span class="card__icon-description">{{ daysAgo }} days ago</span>
+                <div class="icon-text">
+                    <img src="../../../../assets/clock.svg" alt="">
+                    <span>{{ daysAgo }} days ago</span>
                 </div>
             </div>
         </div>
