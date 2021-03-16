@@ -6,7 +6,7 @@
         <div class="card__text">
             <strong class="card__company">{{ job.company }}</strong>
             <h3 class="card__job">{{ job.title }}</h3>
-            <p class="flag" *ngIf="job.type">{{ job.type }}</p>
+            <p class="flag card__flag" *ngIf="job.type">{{ job.type }}</p>
             <div class="card__details flex align-center">
                 <div class="icon-text">
                     <img src="../../../../assets/earth.svg" alt="">

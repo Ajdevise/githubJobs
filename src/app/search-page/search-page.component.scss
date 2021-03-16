@@ -26,9 +26,18 @@
         padding: 0.3125rem;
         background-color: #fff;
         border-radius: 4px;
+        margin: 0 auto;
 
         input {
             background-image: url("../../assets/suitcase.svg");
+        }
+        
+        @include breakpoints-up("medium") {
+            max-width: 49.375rem;
+
+            button {
+               padding: 0.875rem 3rem;
+            }
         }
     }
 }
@@ -94,6 +103,7 @@
 
         form {
             margin-right: 2rem;
+            flex-basis: 23.6875rem;
         }
     }
 }

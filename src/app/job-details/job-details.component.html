@@ -1,4 +1,4 @@
-<section *ngIf="job; else loading">
+<section *ngIf="job; else loading" class="details">
     <aside class="details__aside">
         <a routerLink="/" class="flex align-center">
             <img src="../../assets/long-arrow-left.svg" alt="" class="details__icon">
@@ -7,7 +7,7 @@
         <strong class="h3-secondary details__apply">How to apply</strong>
         <p [innerHTML]="job.how_to_apply"></p>
     </aside>
-    <article>
+    <article class="details__article">
         <div class="details__heading">
             <h2>{{ job.title }}</h2>
             <p class="flag details__flag" *ngIf="job.type">

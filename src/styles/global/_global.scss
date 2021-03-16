@@ -58,6 +58,9 @@ ul {
 
     li:not(:first-child) {
         margin-top: .5rem;
+    }
+    
+    li {
         line-height: 1.6;
     }
 }
