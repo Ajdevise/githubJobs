@@ -31,7 +31,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, 
+      {anchorScrolling: 'enabled'})
   ],
   providers: [],
   bootstrap: [AppComponent]

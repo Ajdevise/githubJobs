@@ -1,5 +1,5 @@
 <article class="card">
-    <a href="#" class="card__wrapper flex" [routerLink]="['/', job.id]" data-custom-link="true">
+    <a class="card__wrapper flex" data-custom-link="true" (click)="navigateToDetailsPage()">
         <div class="card__img-wrapper">
             <img [src]="job.company_logo" alt="" class="card__img">
         </div>
@@ -20,3 +20,5 @@
         </div>
     </a>
 </article>
+
+<!-- [routerLink]="['/', job.id]" -->

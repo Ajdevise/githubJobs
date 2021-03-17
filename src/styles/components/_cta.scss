@@ -1,10 +1,29 @@
 .cta {
     border: none;
-    background-color: $color-blue;
-    color: white;
     border-radius: 4px;
     font-family: Roboto, sans-serif;
     font-size: 1rem;
     font-weight: 500;
     padding: 0.875rem 1.6785rem;
+    transition: all .2s;
+
+    &--primary {
+        background-color: $color-blue;
+        color: white;
+
+        &:hover {
+            background-color: darken($color-blue, 10%);
+        }
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: $color-blue;
+        border: 1px solid $color-blue;
+
+        &:hover {
+            color: $color-text;
+            border-color: $color-text;
+        }
+    }
 }

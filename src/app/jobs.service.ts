@@ -6,12 +6,16 @@ import { Search } from './search-page/search';
   providedIn: 'root'
 })
 export class JobsService {
+  lastPage: boolean;
+  clickedJobId: number;
+  jobs: Array<any> = [];
+  page: number;
   currentQuery: Search;
 
   constructor(private http: HttpClient) { }
 
-  getJobs(searchQuery: Search) {
-    return this.http.get<Array<any>>(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${searchQuery.search}&full_time=${searchQuery.fullTime}&location=${searchQuery.location}`).toPromise();
+  getJobs(searchQuery: Search, currentPage: number) {
+    return this.http.get<Array<any>>(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${searchQuery.search}&full_time=${searchQuery.fullTime}&location=${searchQuery.location}&page=${currentPage}`).toPromise();
   }
 
   getJob(id: string) {

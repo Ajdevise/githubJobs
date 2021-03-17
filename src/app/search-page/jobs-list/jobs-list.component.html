@@ -1,6 +1,7 @@
 <div class="position-r">
     <div *ngIf="searchParameters; else selectCriteria">
-        <app-job-card *ngFor="let job of listOfJobs" [job]="job"></app-job-card>
+        <app-job-card *ngFor="let job of listOfJobs; let i = index" [job]="job" [id]="i" (click)="clickedJob(i)" [jobIndex]="i"></app-job-card>
+        <button class="cta cta--secondary" *ngIf="!loading && !isLastPage" (click)="loadMoreJobs()">Load more</button>
     </div>
     <ng-template #selectCriteria>
         <p>Tell us what you are looking for</p>
