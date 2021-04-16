@@ -27,17 +27,11 @@ export class SearchPageComponent implements OnInit {
   }
 
   submitForm() {
-    let obj: Search  = {
-      search: "",
-      fullTime: false,
-      location: "something"
-    };
-
-    obj["search"] = this.stringToQueryString(this.searchForm.value.search);
-    obj["fullTime"] = this.filterForm.value.fullTime;
-    obj["location"] = this.nonEmptyString(this.filterForm.value.place, this.filterForm.value.locationInput);
-
-    this.searchQuery = obj;
+    this.searchQuery = {
+      search: this.stringToQueryString(this.searchForm.value.search),
+      fullTime: this.filterForm.value.fullTime,
+      location: this.nonEmptyString(this.filterForm.value.place, this.filterForm.value.locationInput)
+    }
     this.clearForms();
   }
 
